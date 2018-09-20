@@ -5,7 +5,7 @@ Build
 
 Installation
 - copy build/websql.war into the {CATALINA_HOME}/webapps
-- edit Context file located in conf/web
+- edit Context file located in conf/websql.xml
 - copy context file to {CATALINA_HOME}/conf/Catalina/localhost/
 
 
