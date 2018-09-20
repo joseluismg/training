@@ -1,5 +1,14 @@
 Training Tool to run SQL queries via a webbrowser. 
 
+Build
+- execute:   ant war
+
+Installation
+- copy build/websql.war into the {CATALINA_HOME}/webapps
+- edit Context file located in conf/web
+- copy context file to {CATALINA_HOME}/conf/Catalina/localhost/
+
+
 The web page that make use of the API is located in:
 http://{server}:{port}/websql/index.html
 
@@ -12,6 +21,8 @@ operation sql expects a POST with a JSON structure like this:
 	"password":"littleballoffur",
 	"sql":"select * from books order by price desc;"
 }
+
+if user or password are not defined in the request, then the application will use the credentials defined in the Context.
 
 response is a JSON structure like this
 
